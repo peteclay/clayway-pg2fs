@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  db:
+    container_name: db
+    image: db
+    ports:
+      - 5432:5432
+    environment:
+       POSTGRES_PASSWORD: password
+    logging:
+      driver: json-file
+    volumes:
+      - ./:/db
